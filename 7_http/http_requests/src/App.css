@@ -1,15 +1,10 @@
 .App {
-  text-align: center;
+  text-align: left;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
-}
-
-#titleDesafio{
-  color: crimson;
-  background-color: #282c34;
 }
 
 @media (prefers-reduced-motion: no-preference) {

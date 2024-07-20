@@ -1,0 +1,21 @@
+.ano {
+    background-color: burlywood;
+}
+
+.nome {
+    font-size: xx-large;
+}
+
+.preco {
+    color: red;
+}
+
+.geral {
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+    gap: 10px;
+    border-radius: 5px;
+    border: 3px dotted lightgreen;
+    margin-bottom: 3px;
+}
