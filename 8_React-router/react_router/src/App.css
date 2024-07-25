@@ -14,3 +14,13 @@
   display: flex;
   gap: 10px 10px;
 }
+
+.active{
+  background-color: black;
+  color: aliceblue;
+}
+
+.estaAtivo{
+  background-color: blueviolet;
+  color: aliceblue;
+}

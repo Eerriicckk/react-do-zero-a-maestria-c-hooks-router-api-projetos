@@ -15,7 +15,7 @@ const Home = () => {
             <p>{item.name}</p>
             <p>{item.price}</p>
             <br />
-            <Link to={"/product/" + item.id}>info</Link>
+            <Link to={`/product/${item.id}`}>info</Link>
           </li>
         ))}
       </ul>
