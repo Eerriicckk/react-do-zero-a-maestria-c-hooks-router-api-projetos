@@ -1,0 +1,8 @@
+.footerBar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 27vh;
+    color: silver;
+    background-color: rgb(182, 138, 27);
+}

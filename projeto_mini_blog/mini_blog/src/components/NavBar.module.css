@@ -1,0 +1,19 @@
+.navBar {
+    display: flex;
+    position: absolute;
+    justify-content: space-between;
+    top: 0;
+    min-height: 30px;
+    background-color: rgb(182, 138, 27);
+    width: 100%;
+    color: silver;
+}
+
+.links {
+    display: flex;
+    width: 50%;
+    gap: 10px;
+}
+
+
+
