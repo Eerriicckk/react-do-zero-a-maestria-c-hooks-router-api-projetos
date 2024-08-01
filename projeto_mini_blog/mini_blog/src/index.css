@@ -1,8 +1,9 @@
 body {
-  background-color: rgba(228, 169, 20, 0.829);
+  background-color: whitesmoke;
+  width: 100%;
   padding: 0;
   margin: 0;
-  font-family: "Playwrite AR", sans-serif;
+  font-family: "Ubuntu", sans-serif;
 }
 
 input:focus,
@@ -12,7 +13,7 @@ textarea:focus {
 
 input::placeholder,
 textarea::placeholder {
-  font-family: "Playwrite AR", sans-serif;
+  font-family: "Ubuntu", sans-serif;
 }
 
 a,
@@ -20,12 +21,13 @@ nav button {
   cursor: pointer;
   transition: .2s;
   text-decoration: none;
-  font-family: "Playwrite AR", sans-serif;
+  font-family: "Ubuntu", sans-serif;
+  color: black;
 }
 
 a:hover {
   color: silver;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 form {
