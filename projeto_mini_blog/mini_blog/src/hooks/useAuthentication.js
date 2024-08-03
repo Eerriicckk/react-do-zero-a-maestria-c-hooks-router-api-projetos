@@ -1,4 +1,4 @@
-import { db } from "../firebase/config"
+import { app, db } from "../firebase/config"
 
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile, signOut } from 'firebase/auth'
 import { useEffect, useState } from 'react'
@@ -10,7 +10,7 @@ export const useAuthentication = () => {
     //cleanup
     const [cancelled, setCancelled] = useState(false)
 
-    const auth = getAuth()
+    const auth = getAuth(app)
 
     const checkIfIsCancelled = () => {
         if (cancelled) return
@@ -37,8 +37,6 @@ export const useAuthentication = () => {
 
         } catch (error) {
             setError(error.message)
-            console.log(error.message)
-            console.log(typeof error.message)
         } finally {
             setLoading(false)
         }
@@ -50,11 +48,25 @@ export const useAuthentication = () => {
         signOut(auth)
     }
 
+    // signIn
+    const signIn = async (data) => {
+        checkIfIsCancelled()
+        setLoading(true)
+        setError(false)
+        try {
+            await signInWithEmailAndPassword(auth, data.email, data.password)
+        } catch (error) {
+            setError(error.message)
+        } finally {
+            setLoading(false)
+        }
+    }
+
     useEffect(() => {
         return () => setCancelled(true)
     }, [])
 
     return {
-        auth, createUser, error, loading, logOut
+        auth, createUser, error, loading, logOut, signIn
     }
 }

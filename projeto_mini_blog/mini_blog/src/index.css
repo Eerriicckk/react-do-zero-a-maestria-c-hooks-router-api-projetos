@@ -1,9 +1,10 @@
 body {
-  background-color: whitesmoke;
+  background-color: rgb(241, 232, 167);
   width: 100%;
   padding: 0;
   margin: 0;
   font-family: "Ubuntu", sans-serif;
+  color: rgb(168, 137, 108);
 }
 
 input:focus,
@@ -26,12 +27,11 @@ nav button {
 }
 
 a:hover {
-  color: silver;
   text-decoration: none;
 }
 
 form {
-  color: silver;
+  color: rgb(97, 178, 146);
   display: flex;
   flex-direction: column;
   max-width: 40%;
