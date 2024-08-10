@@ -26,7 +26,7 @@ const NavBar = () => {
                     :
                     <>
                         <NavLink to="/posts/create" className={({ isActive }) => (isActive ? styles.active : styles.links)}>Criar post</NavLink>
-                        <NavLink to="/dasboard" className={({ isActive }) => (isActive ? styles.active : styles.links)}>Dashboard</NavLink>
+                        <NavLink to="/dashboard" className={({ isActive }) => (isActive ? styles.active : styles.links)}>Dashboard</NavLink>
                         <Button onClick={() => logOut()} variant='text'>Sair</Button>
                     </>
                 }

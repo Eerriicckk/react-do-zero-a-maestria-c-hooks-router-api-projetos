@@ -12,9 +12,12 @@ import { AuthContextProvider } from './context/AuthContext';
 import { onAuthStateChanged } from 'firebase/auth';
 import { useEffect, useState } from 'react';
 import { useAuthentication } from './hooks/useAuthentication';
-import Dasboard from './pages/Dashboard/Dasboard';
+import Dashboard from './pages/Dashboard/Dashboard';
 import CreatePost from './pages/CreatePost/CreatePost';
 import { theme } from './theme';
+import Search from './pages/Search/Search';
+import PostInfo from './pages/PostInfo/PostInfo';
+import EditPost from './pages/EditPost/EditPost';
 
 function App() {
 
@@ -44,10 +47,13 @@ function App() {
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
+                <Route path="/posts/:id" element={<PostInfo />} />
                 <Route path="/login" element={!user ? < Login /> : <Navigate to="/" />} />
                 <Route path="/register" element={!user ? <Register /> : <Navigate to="/" />} />
-                <Route path="/dashboard" element={user ? <Dasboard /> : < Login />} />
+                <Route path="/dashboard" element={user ? <Dashboard /> : < Login />} />
                 <Route path="/posts/create" element={user ? <CreatePost /> : < Login />} />
+                <Route path="/posts/edit/:id" element={user ? <EditPost /> : < Login />} />
+                <Route path="/search" element={<Search/>} />
               </Routes>
             </Box>
             <Footer />
